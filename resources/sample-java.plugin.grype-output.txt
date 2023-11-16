@@ -1,0 +1,11 @@
+grype sbom:./resources/sample-java.plugin.cdx.json 
+ ✔ Vulnerability DB        [updated]
+New version of grype is available: 0.61.1 (currently running: 0.61.0)
+ ✔ Scanning image...       [3 vulnerabilities]
+   ├── 1 critical, 2 high, 0 medium, 0 low, 0 negligible
+   └── 3 fixed
+NAME                                INSTALLED  FIXED-IN  TYPE          VULNERABILITY        SEVERITY 
+snakeyaml                           1.33       2.0       java-archive  GHSA-mjmj-j48q-9wg2  High      
+spring-boot-actuator-autoconfigure  3.0.5      3.0.6     java-archive  GHSA-g5h3-w546-pj7f  Critical  
+spring-core                         6.0.7      6.0.8     java-archive  GHSA-wxqc-pxw9-g2p8  High      
+

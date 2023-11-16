@@ -1,0 +1,31 @@
+$ trivy sbom resources/sample-java.plugin.cdx.json 
+2023-05-11T15:17:04.518-0400	INFO	Need to update DB
+2023-05-11T15:17:04.518-0400	INFO	DB Repository: ghcr.io/aquasecurity/trivy-db
+2023-05-11T15:17:04.518-0400	INFO	Downloading DB...
+36.76 MiB / 36.76 MiB [--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------] 100.00% 18.78 MiB p/s 2.2s
+2023-05-11T15:17:07.352-0400	INFO	Vulnerability scanning is enabled
+2023-05-11T15:17:07.353-0400	INFO	Detected SBOM format: cyclonedx-json
+2023-05-11T15:17:07.356-0400	WARN	Third-party SBOM may lead to inaccurate vulnerability detection
+2023-05-11T15:17:07.356-0400	WARN	Recommend using Trivy to generate SBOMs
+2023-05-11T15:17:07.356-0400	WARN	Ignore the OS package as no OS information is found.
+2023-05-11T15:17:07.364-0400	INFO	Number of language-specific files: 1
+2023-05-11T15:17:07.364-0400	INFO	Detecting jar vulnerabilities...
+
+Java (jar)
+
+Total: 3 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 1, CRITICAL: 2)
+
+┌─────────────────────────────────────────────────────────────┬────────────────┬──────────┬───────────────────┬───────────────────────────────┬────────────────────────────────────────────────────────────┐
+│                           Library                           │ Vulnerability  │ Severity │ Installed Version │         Fixed Version         │                           Title                            │
+├─────────────────────────────────────────────────────────────┼────────────────┼──────────┼───────────────────┼───────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ org.springframework.boot:spring-boot-actuator-autoconfigure │ CVE-2023-20873 │ CRITICAL │ 3.0.5             │ 2.7.11, 3.0.6                 │ Spring Boot Security Bypass with Wildcard Pattern Matching │
+│                                                             │                │          │                   │                               │ on Cloud Foundry                                           │
+│                                                             │                │          │                   │                               │ https://avd.aquasec.com/nvd/cve-2023-20873                 │
+├─────────────────────────────────────────────────────────────┼────────────────┼──────────┼───────────────────┼───────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ org.springframework:spring-core                             │ CVE-2023-20863 │ HIGH     │ 6.0.7             │ 5.2.24.RELEASE, 5.3.27, 6.0.8 │ Spring Expression DoS Vulnerability                        │
+│                                                             │                │          │                   │                               │ https://avd.aquasec.com/nvd/cve-2023-20863                 │
+├─────────────────────────────────────────────────────────────┼────────────────┼──────────┼───────────────────┼───────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ org.yaml:snakeyaml                                          │ CVE-2022-1471  │ CRITICAL │ 1.33              │ 2.0                           │ Constructor Deserialization Remote Code Execution          │
+│                                                             │                │          │                   │                               │ https://avd.aquasec.com/nvd/cve-2022-1471                  │
+└─────────────────────────────────────────────────────────────┴────────────────┴──────────┴───────────────────┴───────────────────────────────┴────────────────────────────────────────────────────────────┘
+

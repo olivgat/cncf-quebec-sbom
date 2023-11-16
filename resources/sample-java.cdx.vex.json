@@ -1,0 +1,120 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.4",
+  "serialNumber" : "urn:uuid:93579e5f-c1b6-4869-881a-ddbcf5922b8d",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2023-05-11T14:55:03Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.7.1"
+      }
+    ],
+    "component" : {
+      "name" : "sample-java-plugin",
+      "version" : "SNAPSHOT",
+      "type" : "application",
+      "bom-ref" : "2f7a22eb-48ef-4ecd-84ba-19c99b98fa9d"
+    }
+  },
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "56e5751e-de7d-4617-af29-761e77857a00",
+      "id" : "CVE-2022-1471",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        502
+      ],
+      "description" : "SnakeYaml's Constructor() class does not restrict types which can be instantiated during deserialization. Deserializing yaml content provided by an attacker can lead to remote code execution. We recommend using SnakeYaml's SafeConsturctor when parsing untrusted content to restrict deserialization. We recommend upgrading to version 2.0 and beyond.",
+      "published" : "2022-12-01T11:15:00Z",
+      "updated" : "2023-04-25T17:15:00Z",
+      "analysis" : {
+        "state" : "exploitable",
+        "response" : [
+          "workaround_available"
+        ]
+      },
+      "affects" : [
+        {
+          "ref" : "2f7a22eb-48ef-4ecd-84ba-19c99b98fa9d"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "e2e91a9a-2404-4fed-9e0f-b675c2ad8d21",
+      "id" : "CVE-2023-20873",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "description" : "In Spring Boot versions 3.0.0 - 3.0.5, 2.7.0 - 2.7.10, and older unsupported versions, an application that is deployed to Cloud Foundry could be susceptible to a security bypass. Users of affected versions should apply the following mitigation: 3.0.x users should upgrade to 3.0.6+. 2.7.x users should upgrade to 2.7.11+. Users of older, unsupported versions should upgrade to 3.0.6+ or 2.7.11+.",
+      "published" : "2023-04-20T21:15:00Z",
+      "updated" : "2023-05-01T18:51:00Z",
+      "affects" : [
+        {
+          "ref" : "2f7a22eb-48ef-4ecd-84ba-19c99b98fa9d"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "88cc35c4-ea9a-401a-8a56-3f98a9e36c9e",
+      "id" : "CVE-2023-20863",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        917
+      ],
+      "description" : "In spring framework versions prior to 5.2.24 release+ ,5.3.27+ and 6.0.8+ , it is possible for a user to provide a specially crafted SpEL expression that may cause a denial-of-service (DoS) condition.",
+      "published" : "2023-04-13T20:15:00Z",
+      "updated" : "2023-04-21T18:04:00Z",
+      "affects" : [
+        {
+          "ref" : "2f7a22eb-48ef-4ecd-84ba-19c99b98fa9d"
+        }
+      ]
+    }
+  ]
+}
